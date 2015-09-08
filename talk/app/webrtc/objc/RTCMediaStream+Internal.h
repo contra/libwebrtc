@@ -37,4 +37,12 @@
 - (id)initWithMediaStream:
         (rtc::scoped_refptr<webrtc::MediaStreamInterface>)mediaStream;
 
+- (void)update;
+- (BOOL)hasNativeAudioTrack:(RTCAudioTrack *)objcTrack;
+- (BOOL)hasNativeVideoTrack:(RTCVideoTrack *)objcTrack;
+- (BOOL)hasObjcAudioTrack:
+    (rtc::scoped_refptr<webrtc::AudioTrackInterface>)nativeTrack;
+- (BOOL)hasObjcVideoTrack:
+    (rtc::scoped_refptr<webrtc::VideoTrackInterface>)nativeTrack;
+
 @end
